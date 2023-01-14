@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string-array name="countries">
+        <item>Austria</item>
+        <item>Belgium</item>
+        <item>Bulgaria</item>
+        <item>Croatia</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Estonia</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Greece</item>
+        <item>Hungary</item>
+        <item>Ireland</item>
+        <item>Italy</item>
+        <item>Latvia</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Malta</item>
+        <item>Netherlands</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Romania</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Spain</item>
+        <item>Sweden</item>
+    </string-array>
+
+    <string-array name="country_codes">
+        <item>+43</item>
+        <item>+32</item>
+        <item>+359</item>
+        <item>+385</item>
+        <item>+357</item>
+        <item>+420</item>
+        <item>+45</item>
+        <item>+372</item>
+        <item>+358</item>
+        <item>+33</item>
+        <item>+49</item>
+        <item>+30</item>
+        <item>+36</item>
+        <item>+354</item>
+        <item>+353</item>
+        <item>+39</item>
+        <item>+371</item>
+        <item>+423</item>
+        <item>+370</item>
+        <item>+352</item>
+        <item>+356</item>
+        <item>+31</item>
+        <item>+47</item>
+        <item>+48</item>
+        <item>+351</item>
+        <item>+40</item>
+        <item>+421</item>
+        <item>+386</item>
+        <item>+34</item>
+        <item>+46</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Man</item>
+        <item>Woman</item>
+    </string-array>
+</resources>
