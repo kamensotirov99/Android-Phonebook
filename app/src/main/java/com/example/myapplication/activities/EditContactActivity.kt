@@ -22,6 +22,7 @@ class EditContactActivity : AppCompatActivity() {
     private lateinit var btnBack: Button
     private lateinit var databaseHandler: DatabaseHandler
 
+    //initial position of elements in the respective spinners
     private var countryPosition: Int = 0
     private var genderPosition: Int = 0
 
@@ -66,7 +67,7 @@ class EditContactActivity : AppCompatActivity() {
         countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerEditCountry.adapter=countryAdapter
         countryPosition = countryAdapter.getPosition(intent.getStringExtra("country"))
-        spinnerEditCountry.setSelection(countryPosition)
+        spinnerEditCountry.setSelection(countryPosition) // sets the position of the element in the spinner, according to the element gotten from the intent
 
 
         var genderAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
@@ -74,7 +75,7 @@ class EditContactActivity : AppCompatActivity() {
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerEditGender.adapter=genderAdapter
         genderPosition = genderAdapter.getPosition(intent.getStringExtra("gender"))
-        spinnerEditGender.setSelection(genderPosition)
+        spinnerEditGender.setSelection(genderPosition) // sets the position of the element in the spinner, according to the element gotten from the intent
     }
 
     private fun switchToMainActivity(){

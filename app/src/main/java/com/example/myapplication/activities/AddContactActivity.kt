@@ -60,6 +60,7 @@ class AddContactActivity : AppCompatActivity() {
         spinnerGender.adapter=genderAdapter
     }
 
+    //creates a map of country codes from both arrays
     private fun getCountryCodes(): Map<String, String> {
         val res: Resources = resources
         val countryKeys = res.getStringArray(R.array.countries)

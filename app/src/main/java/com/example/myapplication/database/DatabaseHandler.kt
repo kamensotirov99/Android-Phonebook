@@ -10,7 +10,7 @@ import com.example.myapplication.models.ContactModel
 open class DatabaseHandler(context:Context) : SQLiteOpenHelper(context, DATABASE_NAME,null, DATABASE_VERSION) {
 
     companion object{
-        private const val DATABASE_VERSION = 8
+        private var DATABASE_VERSION = 8
         private const val DATABASE_NAME = "contacts.db"
         private const val TBL_CONTACTS = "tbl_contacts"
         private const val FIRST_NAME = "first_name"
@@ -37,6 +37,7 @@ open class DatabaseHandler(context:Context) : SQLiteOpenHelper(context, DATABASE
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         p0!!.execSQL("DROP TABLE IF EXISTS $TBL_CONTACTS")
         onCreate(p0)
+        DATABASE_VERSION++
     }
 
     fun insertContact (contact: ContactModel):Long{

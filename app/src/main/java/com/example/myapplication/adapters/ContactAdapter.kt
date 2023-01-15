@@ -17,7 +17,6 @@ import com.example.myapplication.models.ContactModel
 class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
     private var contactList: ArrayList<ContactModel> = ArrayList()
     private var onClickDeleteItem: ((ContactModel)->Unit)? = null
-    private var onClickItem: ((ContactModel)->Unit)? = null
 
     fun addItems(items: ArrayList<ContactModel>){
         this.contactList=items
@@ -26,10 +25,6 @@ class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
 
     fun setOnClickDeleteItem(callback:(ContactModel)->Unit){
         this.onClickDeleteItem = callback
-    }
-
-    fun setOnClickItem(callback: (ContactModel) -> Unit){
-        this.onClickItem = callback
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ContactViewHolder(
@@ -61,6 +56,7 @@ class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
         }
 
         holder.btnEdit.setOnClickListener{
+            //pass contact data to EditContactActivity
             var firstName: String = contact.firstName
             var lastName: String = contact.lastName
             var phoneNumber: String = contact.phoneNumber
@@ -99,7 +95,7 @@ class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {
         fun bindView(contact: ContactModel){
             firstName.text=contact.firstName
             lastName.text=contact.lastName
-            phoneNumber.text=contact.phoneNumber.toString()
+            phoneNumber.text= contact.phoneNumber
         }
     }
 
