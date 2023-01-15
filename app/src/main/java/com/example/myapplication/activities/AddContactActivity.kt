@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -11,6 +11,10 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
+import com.example.myapplication.models.ContactModel
+import com.example.myapplication.database.DatabaseHandler
+import com.example.myapplication.MainActivity
+import com.example.myapplication.R
 
 class AddContactActivity : AppCompatActivity() {
     private lateinit var spinnerCountry: Spinner
@@ -45,11 +49,13 @@ class AddContactActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.btnAdd)
         btnBack = findViewById(R.id.btnBack)
 
-        var countryAdapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,R.array.countries,android.R.layout.simple_spinner_item)
+        var countryAdapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
+            R.array.countries,android.R.layout.simple_spinner_item)
         countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCountry.adapter=countryAdapter
 
-        var genderAdapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,R.array.genders,android.R.layout.simple_spinner_item)
+        var genderAdapter:ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
+            R.array.genders,android.R.layout.simple_spinner_item)
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerGender.adapter=genderAdapter
     }

@@ -1,10 +1,12 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.myapplication.MainActivity
+import com.example.myapplication.R
 
 class ContactDetailsActivity : AppCompatActivity() {
     private lateinit var tvName: TextView

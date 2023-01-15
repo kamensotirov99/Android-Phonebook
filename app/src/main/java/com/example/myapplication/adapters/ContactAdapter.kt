@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.adapters
 
 import android.content.Intent
 import android.graphics.Color
@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.activities.ContactDetailsActivity
+import com.example.myapplication.activities.EditContactActivity
+import com.example.myapplication.models.ContactModel
 
 
 class ContactAdapter: RecyclerView.Adapter<ContactAdapter.ContactViewHolder>() {

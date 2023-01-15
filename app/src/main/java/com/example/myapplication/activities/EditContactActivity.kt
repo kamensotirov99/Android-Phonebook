@@ -1,10 +1,14 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.content.Intent
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.example.myapplication.models.ContactModel
+import com.example.myapplication.database.DatabaseHandler
+import com.example.myapplication.MainActivity
+import com.example.myapplication.R
 
 class EditContactActivity : AppCompatActivity() {
     private lateinit var edEditFirstName: EditText
@@ -57,14 +61,16 @@ class EditContactActivity : AppCompatActivity() {
         btnEdit = findViewById(R.id.btnEdit)
         btnBack = findViewById(R.id.btnBack)
 
-        var countryAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,R.array.countries,android.R.layout.simple_spinner_item)
+        var countryAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
+            R.array.countries,android.R.layout.simple_spinner_item)
         countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerEditCountry.adapter=countryAdapter
         countryPosition = countryAdapter.getPosition(intent.getStringExtra("country"))
         spinnerEditCountry.setSelection(countryPosition)
 
 
-        var genderAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,R.array.genders,android.R.layout.simple_spinner_item)
+        var genderAdapter: ArrayAdapter<CharSequence> = ArrayAdapter.createFromResource(this,
+            R.array.genders,android.R.layout.simple_spinner_item)
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerEditGender.adapter=genderAdapter
         genderPosition = genderAdapter.getPosition(intent.getStringExtra("gender"))

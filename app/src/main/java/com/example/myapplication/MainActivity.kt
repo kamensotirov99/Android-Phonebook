@@ -7,6 +7,9 @@ import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.activities.AddContactActivity
+import com.example.myapplication.adapters.ContactAdapter
+import com.example.myapplication.database.DatabaseHandler
 
 class MainActivity : AppCompatActivity() {
 
