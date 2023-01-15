@@ -100,7 +100,7 @@ class EditContactActivity : AppCompatActivity() {
         if(firstName.isEmpty()||lastName.isEmpty()||email.isEmpty()||phoneNumber.isEmpty()||gender.isEmpty()||country.isEmpty()){
             Toast.makeText(this,"Please fill all fields",Toast.LENGTH_SHORT).show()
         }else{
-            val contact = ContactModel(firstName,lastName,countryCodes[country]+phoneNumber.substring(4),country,email,gender,isInDB)
+            val contact = ContactModel(firstName,lastName,countryCodes[country]+phoneNumber.substring(if(countryCodes[country]?.length==3) 3 else 4),country,email,gender,isInDB)
             val status = originalPhoneNumber?.let { databaseHandler.updateContact(it,contact) }
             if (status != null) {
                 if(status>-1){
